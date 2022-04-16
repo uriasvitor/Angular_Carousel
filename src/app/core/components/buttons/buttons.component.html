@@ -1,5 +1,34 @@
-<button [attr.disable]="current == 0" (click)="onPrevious()" mat-stroked-button>Prev</button>
-<button (click)="onNext()" mat-stroked-button>Next</button>
-Current: {{current}}<br/>
-Prev: {{previous}} <br/>
-<button routerLink="/details">aaaaa</button>
+
+<div class="container">
+  <div class="slide-container">
+     <div class="slide" pos="1">
+      <app-details [page]="current"></app-details>
+    </div>
+  </div>
+  <div class="slide-toggle-container">
+    <div class="buttons">
+
+    <a class="slide-toggle" [attr.disable]="current == 10" (click)="onNext()" direction="next" >
+      <img src="../../../../assets/img/SetaEsquerda.png" style="transform: rotate(175deg);">
+    </a>
+    
+    <a class="slide-toggle" [attr.disable]="current == 0" (click)="onPrevious()">
+      <img src="../../../../assets/img/SetaEsquerda.png" class="setadireita"></a>
+      <div class="lineBtns"></div>
+        <div class="CurrentPage">
+      {{current}} | <span class="max">10</span><br/> <br/>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  
+</div>
