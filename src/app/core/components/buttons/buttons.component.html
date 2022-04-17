@@ -1,18 +1,17 @@
 
+
 <div class="container">
   <div class="slide-container">
-     <div class="slide" pos="1">
       <app-details [page]="current"></app-details>
-    </div>
   </div>
   <div class="slide-toggle-container">
     <div class="buttons">
 
-    <a class="slide-toggle" [attr.disable]="current == 10" (click)="onNext()" direction="next" >
+    <a class="slide-toggle" *ngIf="current < 10"(click)="onNext()" direction="next" >
       <img src="../../../../assets/img/SetaEsquerda.png" style="transform: rotate(175deg);">
     </a>
     
-    <a class="slide-toggle" [attr.disable]="current == 0" (click)="onPrevious()">
+    <a class="slide-toggle" *ngIf="current > 1" (click)="onPrevious()">
       <img src="../../../../assets/img/SetaEsquerda.png" class="setadireita"></a>
       <div class="lineBtns"></div>
         <div class="CurrentPage">
@@ -21,14 +20,4 @@
     </div>
     
   </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-    </div>
-    <div class="col-sm">
-      
-    </div>
-  
 </div>

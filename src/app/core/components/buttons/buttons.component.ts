@@ -7,13 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
   @Input()
-  page = 0;
-  @Input()
-  current = 0;
+  current = 1;
   @Input()
   previous = -1;
   
-  maxPage:number = 9;
 
   public onPrevious(){
     if(this.previous > 0)
@@ -21,7 +18,7 @@ export class ButtonsComponent implements OnInit {
   }
 
   public onNext(){
-    if(this.previous < this.maxPage)
+    if(this.previous < 9)
     this.previous = this.current ++;
   }
   constructor() { }

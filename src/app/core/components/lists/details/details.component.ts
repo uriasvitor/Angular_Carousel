@@ -1,15 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.scss'],
 })
+
 export class DetailsComponent implements OnInit {
   @Input()
-  page?:number = 1;
+  page?:number = -1;
   
-
   constructor() { }
 
   ngOnInit(): void {

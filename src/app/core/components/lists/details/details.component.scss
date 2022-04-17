@@ -4,4 +4,21 @@
     padding: 0;
     width: 100%;
 }
+img{
+    position: relative;
+    width: 80%;
+}
+.humanaPageOne{
+    position: absolute;
+    width: 80%;
+    z-index: 1;
+}
+.humanaformaPageOne{
+    z-index: 0;
+}
+
+
+.Elipse{
+    z-index:-1;
+}
 
