@@ -76,11 +76,15 @@
     background: #4F95DA;
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 992px) {
     .photo{
         height: 350px !important;
-        width: 580px !important;
+        width: 680px !important;
         border: 10px solid #3ea110cc;
+    }
+    .btnav{
+        display: grid;
+        & > *{margin: auto;}
     }
     .slide-container{
         position: relative;

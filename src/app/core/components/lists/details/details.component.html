@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-md-12 col-lg-8">
         <div class="sliders" [@animImageSlider]="counter">
             <div *ngFor="let img of images; let i = index">
                 <div class="pageOne" *ngIf="i === counter">
@@ -12,7 +12,7 @@
             </div>
       </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-md-4 mt-5 btnav">
           <div class="buttons">
               <a class="slide-toggle" *ngIf="counter < 10" (click)="onNext()" @fadeAnimation direction="next">
                   <img src="../../../../assets/img/SetaEsquerda.png" style="transform: rotate(175deg);">
