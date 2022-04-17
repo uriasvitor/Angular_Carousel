@@ -20,7 +20,7 @@ export class DetailsComponent implements OnInit {
   counter:number = 0;
 
   images =  [
-    '../../../../../assets/img/1.jpg',
+    '../../../../../assets/img/1.png',
     '../../../../../assets/img/2.jpg',
     '../../../../../assets/img/3.jpg',
     '../../../../../assets/img/4.jpg',
