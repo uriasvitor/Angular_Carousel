@@ -107,8 +107,9 @@ button{
   }
   
   @media only screen and (max-width: 600px) {
-    .photo{
-        width: 800px;
+      .photo{
+        height: 600px !important;
+        width: 800px !important;
         border: 10px solid #3ea110cc;
     }
     .buttons{
@@ -125,6 +126,8 @@ button{
 }
 
 .photo{
+    border: 5px solid #3ea110cc;
+    border-radius: 12px;
     height: 800px;
     width: 1200px;
 }
