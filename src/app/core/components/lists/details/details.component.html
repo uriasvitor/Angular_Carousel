@@ -1,42 +1,29 @@
+<div class="container">
+    <div class="slide-container">
+        
+        <div class="sliders" [@animImageSlider]="counter">
+            <div *ngFor="let img of images; let i = index">
+                <div class="pageOne" *ngIf="i === counter">
+                    <div class="galleryOne">
+                        <img src="{{images[i]}}" class="photo">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="pageOne" *ngIf="page == 1 ">
-    <div class="galleryOne">
-        <img src="../../../../../assets/img/personagem1.png" class="PersonagemElipse" id="div1">
-        <img src="../../../../../assets/img/Elipse 591.png" class="Elipse" alt="">
+    </div>
+    <div class="slide-toggle-container">
+        <div class="buttons">
+            <a class="slide-toggle" *ngIf="counter < 10" (click)="onNext()" @fadeAnimation direction="next">
+                <img src="../../../../assets/img/SetaEsquerda.png" style="transform: rotate(175deg);">
+            </a>
+
+            <a class="slide-toggle" *ngIf="counter > 1" @fadeAnimation (click)="onPrevious()">
+                <img src="../../../../assets/img/SetaEsquerda.png" class="setadireita"></a>
+            <div class="lineBtns"></div>
+            <div class="CurrentPage">
+                {{counter}} | <span class="max">10</span><br /><br />
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="pageOne" *ngIf="page == 2 ">
-    <div class="galleryOne">
-        <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-        <img src="../../../../../assets/img/Forma 600_2.png" class="humanaformaPageOne"alt="">
-    </div></div>
-    
-<div class="pageOne" *ngIf="page == 3">
-        <img src="../../../../../assets/img/business-people-office.png" class="humanaPageOne"alt="">
-</div>
-<div class="pageTwo" *ngIf="page == 4">
-        <img src="../../../../../assets/img/mulhernotelefone.png" class ="humanaPageOne" alt="">
- </div>
- <div class="pageThree" *ngIf="page == 5">
-        <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-</div>
-<div class="pageThree" *ngIf="page == 6">
-    <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-</div>
-<div class="pageThree" *ngIf="page == 7">
-    <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-</div>
-<div class="pageThree" *ngIf="page == 8">
-    <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-</div>
-<div class="pageThree" *ngIf="page == 9">
-    <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-</div>
-<div class="pageThree" *ngIf="page == 10">
-    <img src="../../../../../assets/img/humana.png" class="humanaPageOne"alt="">
-</div>
-
-
-
-
