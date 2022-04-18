@@ -1,8 +1,8 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-md-12 col-lg-8">
-        <div class="sliders" [@animImageSlider]="counter">
+      <div class="col-md-12 col-lg-8"[@animImageSlider]="counter">
+        <div class="sliders" >
             <div *ngFor="let img of images; let i = index">
                 <div class="pageOne" *ngIf="i === counter">
                     <div class="galleryOne">
@@ -12,6 +12,7 @@
             </div>
       </div>
       </div>
+
       <div class="col-md-4 mt-5 btnav">
           <div class="buttons">
               <a class="slide-toggle" *ngIf="counter < 10" (click)="onNext()" @fadeAnimation direction="next">
@@ -27,5 +28,5 @@
       </div>
     </div>
   </div>
-
+</div>
 

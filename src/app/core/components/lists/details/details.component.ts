@@ -1,7 +1,6 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 import { fadeAnimation } from 'src/assets/animations/fadded.animation';
-import { right,left } from 'src/assets/animations/slide.animation';
 
 
 @Component({
@@ -10,8 +9,12 @@ import { right,left } from 'src/assets/animations/slide.animation';
   styleUrls: ['./details.component.scss'],
   animations: [fadeAnimation,
     trigger('animImageSlider', [
-      transition(':increment', right),
-      transition(':decrement', left),
+      transition(':increment', group([
+        query(':enter', [
+          style({ opacity: 0 }),
+          animate('1.8s ease-out', style('*'))
+        ])
+      ]))
     ]),
   ]
 })
@@ -20,17 +23,17 @@ export class DetailsComponent implements OnInit {
   counter:number = 0;
 
   images =  [
-    '../../../../../assets/img/1.png',
-    '../../../../../assets/img/2.jpg',
-    '../../../../../assets/img/3.jpg',
-    '../../../../../assets/img/4.jpg',
-    '../../../../../assets/img/5.jpg',
-    '../../../../../assets/img/6.jpg',
-    '../../../../../assets/img/7.jpg',
-    '../../../../../assets/img/8.jpg',
-    '../../../../../assets/img/9.jpg',
-    '../../../../../assets/img/10.jpg',
-    '../../../../../assets/img/11.png'
+    './assets/img/1.png',
+    './assets/img/2.jpg',
+    './assets/img/3.jpg',
+    './assets/img/4.jpg',
+    './assets/img/5.jpg',
+    './assets/img/6.jpg',
+    './assets/img/7.jpg',
+    './assets/img/8.jpg',
+    './assets/img/9.jpg',
+    './assets/img/10.jpg',
+    './assets/img/11.png'
   ]
 
   currentState?: string;
